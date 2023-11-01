@@ -22,8 +22,8 @@ public class CacheService {
         return id + "zj";
     }
 
-    @CustomCacheEvict(cachePutValue = "cacheService.getName,cacheService.getEmail", keyField = "#id#lang")
-    public Boolean saveUser(String id){
+    @CustomCacheEvict(cachePutValue = "cacheService.getName,cacheService.getEmail", keyField = "#id+#lang")
+    public Boolean saveUser(String id,String lang){
         return true;
     }
 }

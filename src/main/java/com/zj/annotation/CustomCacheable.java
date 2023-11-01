@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 public @interface CustomCacheable {
     // 类名（去除包名）.方法
     String methodKey() default "";
-    // 关键字段 #字段1#字段2
+    // 关键字段 #字段1+#字段2
     String fieldKey() default "";
     long expire() default 300;
     TimeUnit timeUnit() default TimeUnit.SECONDS;
